@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta value="no-cache, no-store, must-revalidate" name="no-chache">
+    <title>Editar Signo Zodiacal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="/__/firebase/11.0.0/firebase-app-compat.js"></script>
+    <script defer src="/__/firebase/11.0.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/11.0.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/11.0.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/11.0.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/init.js"></script>
+</head>
+<body class="container">
+    <header class="header row">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_01" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Horoscopo
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_01">
+                                <li><a class="dropdown-item" href="lista.html">Listar Signos</a></li>
+                                <li><a class="dropdown-item" href="agregar.html">Agregar Signo</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink_02" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                Usuarios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink_02">
+                                <li><a class="dropdown-item" href="registrar.html">Registrar nuevo usuario</a></li>
+                                <li><a class="dropdown-item" href="#">Otra que se ocurra</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" onclick="salir()">Cerrar sesión</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="row mt-5">
+        <h4>Editar Signo Zodiacal</h4>
+        <div>
+            <img id="signoImg" src="" alt="Imagen del Signo" width="200" class="mb-3"/>
+            <br>
+            <label for="txtPosic">Posición:</label><br>
+            <input type="text" id="txtPosic"><br><br>
+            <label for="txtSigno">Signo:</label><br>
+            <input type="text" id="txtSigno"><br><br>
+            <label for="txtRango">Rango:</label><br>
+            <input type="text" id="txtRango"><br><br>
+            <label for="txtElemento">Elemento:</label><br>
+            <select id="txtElemento">
+                <option value="Fuego">Fuego</option>
+                <option value="Tierra">Tierra</option>
+                <option value="Aire">Aire</option>
+                <option value="Agua">Agua</option>
+            </select><br><br>
+            <label for="txtAstro">Astro:</label><br>
+            <input type="text" id="txtAstro"><br><br>
+            <label for="txtPiedra">Piedra:</label><br>
+            <input type="text" id="txtPiedra"><br><br>
+            <label for="txtArchi">File:</label><br>
+            <input type="file" id="txtArchi">
+            <br><br>
+            <input type="button" id="btnUpdate" value="Guardar Cambios">
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script defer src="js/zodiac/editSigno.js"></script>
+</body>
+</html>
